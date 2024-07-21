@@ -7,20 +7,20 @@ body {
 }
 
 header {
-    position: relative;
+    background: url('etc/linkedin_banner_3.png') no-repeat center center/cover;
     color: #fff;
-    padding: 2em 1em; /* Increased padding for better visibility */
+    padding: 2em 1em;
     text-align: center;
-    min-height: 300px; /* Ensure the header has a minimum height */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    min-height: 200px;
 }
 
-header .content {
-    text-align: center;
+header h1, header p {
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    padding: 1em;
+    padding: 0.5em 1em;
     border-radius: 10px;
 }
 
