@@ -12,7 +12,7 @@ header {
     color: #ffffff;
     padding: 2em 1em; /* Increased padding for better visibility */
     text-align: center;
-    min-height: 300px; /* Ensure the header has a minimum height */
+    min-height: 200px; /* Ensure the header has a minimum height */
     display: flex;
     flex-direction: column;
     justify-content: center;
