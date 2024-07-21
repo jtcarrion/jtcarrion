@@ -11,10 +11,23 @@ header {
     color: #fff;
     padding: 1em;
     text-align: center;
+    position: relative;
+    min-height: 200px;
 }
 
 header h1 {
     margin: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: inline-block;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+}
+
+header p {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: inline-block;
+    padding: 0.5em 1em;
+    border-radius: 10px;
 }
 
 nav {
@@ -48,7 +61,6 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1em;
-    position: fixed;
     width: 100%;
     bottom: 0;
 }
