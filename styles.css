@@ -21,6 +21,15 @@ header h1, header p {
     border-radius: 10px;
 }
 
+header a {
+    color: #ffcc00; /* Bright yellow color for links */
+    text-decoration: none;
+}
+
+header a:hover {
+    color: #ff9900; /* Slightly darker shade on hover */
+}
+
 nav {
     background: #333;
     padding: 1em;
