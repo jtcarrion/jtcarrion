@@ -8,6 +8,7 @@ body {
 
 header {
     position: relative;
+    width: 100%
     color: #fff;
     padding: 2em 1em; /* Increased padding for better visibility */
     text-align: center;
@@ -33,7 +34,6 @@ header h1 {
 
 header p {
     margin: 0;
-    display: inline-block;
 }
 
 header a {
