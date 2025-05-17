@@ -18,6 +18,32 @@ body {
     transition: all 0.3s ease;
 }
 
+/* Banner slideshow */
+.banner-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.banner-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.banner-slide.active {
+    opacity: 1;
+}
+
 /* Enhanced header with dynamic background */
 header {
     position: relative;
@@ -30,7 +56,6 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: url('etc/linkedin_banner_3.png') no-repeat center center/cover;
     position: relative;
     overflow: hidden;
 }
@@ -43,7 +68,7 @@ header::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
