@@ -1,0 +1,204 @@
+/* Modern color scheme with gradients */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --background-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    --header-text: #ffffff;
+    --link-color: #ffcc00;
+    --link-hover: #ff9900;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: var(--background-gradient);
+    transition: all 0.3s ease;
+}
+
+/* Enhanced header with dynamic background */
+header {
+    position: relative;
+    width: 100%;
+    color: var(--header-text);
+    padding: 2em 1em;
+    text-align: center;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('etc/linkedin_banner_3.png') no-repeat center center/cover;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Dynamic banner overlay */
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+header h1, header p {
+    position: relative;
+    z-index: 2;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: var(--header-text);
+    margin: 0 0 0.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+header p {
+    margin: 0;
+    color: var(--header-text);
+}
+
+header a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header a:hover {
+    color: var(--link-hover);
+}
+
+/* Enhanced navigation */
+nav {
+    background: var(--primary-color);
+    padding: 1em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: var(--header-text);
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Main content styling */
+main {
+    padding: 2em;
+    min-height: calc(100vh - 200px);
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Enhanced section styling */
+section {
+    background: white;
+    padding: 2em;
+    margin-bottom: 2em;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Publication and conference styling */
+.publication, .conference {
+    margin-bottom: 1.5em;
+    padding: 1em;
+    border-left: 4px solid var(--secondary-color);
+    background: #f8f9fa;
+    transition: transform 0.3s ease;
+}
+
+.publication:hover, .conference:hover {
+    transform: translateX(10px);
+}
+
+/* Enhanced link styling */
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+/* Footer styling */
+footer {
+    background: var(--primary-color);
+    color: var(--header-text);
+    text-align: center;
+    padding: 1em;
+    margin-top: auto;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+    
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    
+    main {
+        padding: 1em;
+    }
+    
+    section {
+        padding: 1em;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-gradient: linear-gradient(135deg, #2c3e50 0%, #1a1a1a 100%);
+        --header-text: #ffffff;
+    }
+    
+    body {
+        color: #ffffff;
+    }
+    
+    section {
+        background: #2c3e50;
+        color: #ffffff;
+    }
+    
+    .publication, .conference {
+        background: #34495e;
+    }
+} 
