@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software - Jackson Carrion</title>
+    <link rel="stylesheet" href="styles4.css">
+    <script src="script.js"></script>
+    <style>
+        .software-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2em;
+            margin-top: 2em;
+        }
+        
+        .software-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5em;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid var(--secondary-color);
+        }
+        
+        .software-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .software-card h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 0.5em;
+        }
+        
+        .software-card .description {
+            color: #666;
+            margin-bottom: 1em;
+            line-height: 1.6;
+        }
+        
+        .software-links {
+            display: flex;
+            gap: 1em;
+            flex-wrap: wrap;
+        }
+        
+        .software-links a {
+            padding: 0.5em 1em;
+            background: var(--secondary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            font-size: 0.9em;
+        }
+        
+        .software-links a:hover {
+            background: var(--accent-color);
+        }
+        
+        .tech-stack {
+            margin-top: 1em;
+            padding-top: 1em;
+            border-top: 1px solid #eee;
+        }
+        
+        .tech-tag {
+            display: inline-block;
+            background: #f0f0f0;
+            color: #666;
+            padding: 0.3em 0.6em;
+            border-radius: 15px;
+            font-size: 0.8em;
+            margin: 0.2em;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2em;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .back-link:hover {
+            color: var(--accent-color);
+        }
+        
+        .back-link::before {
+            content: "← ";
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="banner-container">
+            <div class="banner-slide active" style="background-image: url('etc/PC_banner.png')"></div>
+        </div>
+        <h1><strong>Software & Tools</strong></h1>
+        <p>Open-source projects and computational tools I've developed</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#publications">Publications</a></li>
+            <li><a href="index.html#Conferences">Conferences</a></li>
+            <li><a href="software.html">Software</a></li>
+            <li><a href="index.html#cv">CV</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <a href="index.html" class="back-link">Back to Home</a>
+        
+        <section>
+            <h2>Software Projects</h2>
+            <p>Here are some of the computational tools and software projects I've developed or contributed to:</p>
+            
+            <div class="software-grid">
+                <div class="software-card">
+                    <h3>CryoJAM</h3>
+                    <div class="description">
+                        Automating protein homolog fitting in medium resolution cryo-EM density maps. 
+                        This tool streamlines the process of fitting known protein structures into cryo-EM maps.
+                    </div>
+                    <div class="software-links">
+                        <a href="https://github.com/jtcarrion/CryoJAM">GitHub</a>
+                        <a href="https://doi.org/10.1101/2024.07.10.602952">Paper</a>
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Cryo-EM</span>
+                        <span class="tech-tag">Bioinformatics</span>
+                    </div>
+                </div>
+                
+                <div class="software-card">
+                    <h3>Multi-omics Data Fusion</h3>
+                    <div class="description">
+                        A data-fusion approach for diagnosing developmental dyslexia using multi-omics datasets. 
+                        Combines multiple biological data types for improved diagnostic accuracy.
+                    </div>
+                    <div class="software-links">
+                        <a href="https://github.com/jtcarrion/multiOmics_DataFusion">GitHub</a>
+                        <a href="https://doi.org/10.1101/2023.02.27.530280">Paper</a>
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">R</span>
+                        <span class="tech-tag">Machine Learning</span>
+                        <span class="tech-tag">Multi-omics</span>
+                    </div>
+                </div>
+                
+                <div class="software-card">
+                    <h3>TR-XES Data Visualization</h3>
+                    <div class="description">
+                        Time-resolved X-ray emission spectroscopy data visualization tools for 
+                        studying transient states in Photosystem II.
+                    </div>
+                    <div class="software-links">
+                        <a href="https://github.com/jtcarrion/TR-XES-Data-Vizualization">GitHub</a>
+                        <a href="./etc/WPC_XES_poster.pdf">Poster</a>
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Data Visualization</span>
+                        <span class="tech-tag">X-ray Spectroscopy</span>
+                    </div>
+                </div>
+                
+                <div class="software-card">
+                    <h3>PolypNET</h3>
+                    <div class="description">
+                        Lightweight UNET++ architecture for identifying and segmenting cancerous polyps 
+                        from colonoscopy images with high accuracy.
+                    </div>
+                    <div class="software-links">
+                        <a href="https://github.com/jtcarrion/PolypNet">GitHub</a>
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Deep Learning</span>
+                        <span class="tech-tag">Computer Vision</span>
+                        <span class="tech-tag">UNET++</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="software-grid">
+                <div class="software-card">
+                    <h3>Programming Languages</h3>
+                    <div class="description">
+                        <strong>Python:</strong> Primary language for scientific computing, data analysis, and machine learning<br>
+                        <strong>R:</strong> Statistical analysis and bioinformatics<br>
+                        <strong>MATLAB:</strong> Signal processing and mathematical modeling<br>
+                        <strong>Bash:</strong> Scripting and automation
+                    </div>
+                </div>
+                
+                <div class="software-card">
+                    <h3>Scientific Computing</h3>
+                    <div class="description">
+                        <strong>Cryo-EM:</strong> RELION, cryoSPARC, EMAN2, ChimeraX<br>
+                        <strong>Data Analysis:</strong> NumPy, Pandas, SciPy, Matplotlib<br>
+                        <strong>Machine Learning:</strong> Scikit-learn, TensorFlow, PyTorch<br>
+                        <strong>Bioinformatics:</strong> Biopython, Bio3D, R Bioconductor
+                    </div>
+                </div>
+                
+                <div class="software-card">
+                    <h3>Development Tools</h3>
+                    <div class="description">
+                        <strong>Version Control:</strong> Git, GitHub<br>
+                        <strong>Documentation:</strong> Jupyter Notebooks, Markdown<br>
+                        <strong>Deployment:</strong> Docker, Conda environments<br>
+                        <strong>Collaboration:</strong> Code review, open-source contributions
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Collaborations & Contributions</h2>
+            <p>I actively collaborate on open-source scientific software and contribute to the broader computational biology community. My work focuses on making advanced computational methods accessible to researchers across different domains.</p>
+            
+            <div class="software-card">
+                <h3>Open Source Philosophy</h3>
+                <div class="description">
+                    All my software projects are open-source and available on GitHub. I believe in 
+                    transparency, reproducibility, and community-driven development. Each tool includes 
+                    comprehensive documentation, example datasets, and clear installation instructions.
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Jackson Carrion</p>
+    </footer>
+</body>
+</html> 
