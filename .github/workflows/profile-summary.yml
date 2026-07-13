@@ -5,20 +5,23 @@ on:
     - cron: "0 */1 * * *" # Runs automatically every hour
   workflow_dispatch: # Allows you to run it manually
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
     name: generate-github-profile-3d-contrib
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4 # Upgraded to fix the Node deprecation warning
       - uses: yoshi389111/github-profile-3d-contrib@0.7.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
+          
+      # This safe action replaces the broken manual git commands
       - name: Commit & Push Changes
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add -A .
-          git commit -m "Generated 3D contribution graph" || exit 0
-          git push
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Generated 3D contribution graph"
+          file_pattern: "profile-3d-contrib/*"
